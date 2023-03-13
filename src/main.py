@@ -2,13 +2,14 @@ import ast
 import math
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 
 n = 52
 conjecture = math.log2(n) - math.log2(4 if n & 1 == 0 else 16) / n
 
 
 def data_dir(file_name: str):
-    return f'C:\\Users\\Mark\\source\\repos\\Rust\\shuffle_stats\\{file_name}'
+    return os.getcwd().split('Python')[0] + f'Rust\\shuffle_stats\\{file_name}'
 
 
 def to_list(mm_str: str):
